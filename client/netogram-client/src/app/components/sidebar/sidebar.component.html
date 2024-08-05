@@ -1,5 +1,21 @@
 <div class="container">
-  <div class="all-side-bar">
-  </div>
+  <div class="my-profile">
+    <div class="profile">
+      <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar">
+      <div class="name-profile">
+        <span class="name">John Doe</span>
 
+
+    </div>
+  </div>
+  <div class="all-side-bar">
+    @for(link of navLinks; track $index){
+      <div class="navigation" (click)="setActive(link)" [ngClass]="{'active': activeLink === link}">
+        <span class="material-symbols-outlined">{{ link.icon }}</span>
+        <span class="name-navigation">{{ link.label }}</span>
+      </div>
+    }
+
+  </div>
+</div>
 </div>
