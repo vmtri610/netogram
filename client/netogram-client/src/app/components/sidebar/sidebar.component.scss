@@ -1,44 +1,72 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
+
 .all-side-bar {
   display: flex;
   flex-direction: column;
-  width: calc(90% - 2rem);
-  height: fit-content;
+  justify-content: space-between;
+  width: calc(100% - 2rem);
+  height: 33%;
   background-color: #F9F9FF;
   border-radius: 12px;
   padding: 1rem;
 }
 
-.navigation{
+.profile-avatar-and-name {
   display: flex;
   flex-direction: row;
-  width:calc(100% - 2rem);
+  align-items: center;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  cursor: pointer;
+
+  .avatar {
+    width: 2rem;
+    border-radius: 100%;
+  }
+  .name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #191C20;
+    margin-left: 1rem;
+  }
+}
+
+.profile-avatar-and-name:hover {
+  background-color: #F0F0F7;
+  border-radius: 12px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 2rem);
   align-items: center;
   padding: 1rem;
   cursor: pointer;
 
-  .name-navigation{
+  .name-navigation {
     font-size: 1rem;
     font-weight: 500;
     margin-left: 1rem;
-    color: 191C20;
+    color: #191C20;
   }
 
 
 }
 
-.navigation:hover{
+.navigation:hover {
   background-color: #F0F0F7;
   border-radius: 12px;
 }
-.material-symbols-outlined{
+
+.material-symbols-outlined {
   font-size: 30px;
-  color: 191C20;
+  color: #191C20;
 }
 
 .navigation.active {
@@ -47,6 +75,10 @@
   border-radius: 12px;
 
   .name-navigation {
-    color: 131C2B;
+    color: #131C2B;
   }
 }
+
+
+
+

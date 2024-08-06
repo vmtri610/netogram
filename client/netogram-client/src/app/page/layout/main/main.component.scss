@@ -2,19 +2,22 @@
   display: flex;
   flex-direction: row;
   height: 100%;
-  width: calc(100% - 16rem);
-  padding: 0 7rem;
+  width: calc(100% - 4rem);
+  padding: 0 2rem;
 }
 .left{
-  width: 24%;
+  width: calc(26% - 2rem);
   height: 100%;
+  padding-right: 2rem;
 }
 .main{
-  width: 52%;
+  width: 48%;
   height: 100%;
 }
 
 .right{
-  width: 24%;
+  width: 26%;
   height: 100%;
 }
+
+

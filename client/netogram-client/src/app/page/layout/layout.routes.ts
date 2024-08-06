@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import {LayoutComponent} from "./layout.component";
+import {ProfileComponent} from "./profile/profile.component";
 
 export const LAYOUT_ROUTES: Routes = [
     {
@@ -7,8 +8,8 @@ export const LAYOUT_ROUTES: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: 'profile',
-        loadChildren: () => import('./profile/profile.routes').then(m => m.PROFILE_ROUTES)
+        path: 'profile/:uid',
+        component: ProfileComponent
       },
       {
         path: '',

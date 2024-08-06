@@ -33,15 +33,26 @@ export class SidebarComponent implements OnInit {
   navLinks = [
     { label: 'Home', route: 'home', icon: 'home_app_logo' },
     { label: 'Friends', route: 'friends', icon: 'diversity_2' },
-    { label: 'Profile', route: 'profile', icon: 'person' }
   ];
 
+  user = {
+    uid: '12',
+    userName: 'John Doe',
+    profilePic: 'https://www.w3schools.com/howto/img_avatar.png',
+  }
   activeLink = this.navLinks[0];
 
   setActive(link: any) {
     this.activeLink = link
     this.route.navigateByUrl(link.route).then();
   }
+
+  //naviigate to profile
+  navigateToProfile() {
+    this.route.navigateByUrl(`/profile/${this.user.uid}`).then();
+
+  }
+
   setActiveLinkBasedOnUrl() {
     if (this.route.url.includes('/home')) {
       this.activeLink = this.navLinks[0];

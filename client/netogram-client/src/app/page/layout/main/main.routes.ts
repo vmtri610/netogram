@@ -7,13 +7,19 @@ export const MAIN_ROUTES: Routes = [
     component: MainComponent,
     children: [
       {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home'
+      },
+      {
         path: 'home',
         loadChildren: () => import('./home/home.routes').then(m => m.HOME_ROUTES)
       },
       {
         path: 'friends',
         loadChildren: () => import('./friends/friends.routes').then(m => m.FRIENDS_ROUTES)
-      }
+      },
+
     ]
   }
 ];
